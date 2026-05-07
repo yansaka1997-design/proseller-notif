@@ -1,3 +1,4 @@
+cat > .github/workflows/build.yml << 'EOF'
 name: Build APK
 on:
   push:
@@ -14,14 +15,16 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Make gradlew executable
-        run: chmod +x gradlew
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.0'
 
       - name: Build Debug APK
-        run: ./gradlew assembleDebug
+        run: gradle assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: app-debug
           path: app/build/outputs/apk/debug/app-debug.apk
+EOF
