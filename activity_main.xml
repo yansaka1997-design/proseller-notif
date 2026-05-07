@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D1117"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🔔 ProSeller Notif"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#FF8C00"
+            android:gravity="center"
+            android:paddingTop="16dp"
+            android:paddingBottom="4dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Notif Ewallet &amp; Bank → Webhook Server"
+            android:textSize="12sp"
+            android:textColor="#888888"
+            android:gravity="center"
+            android:paddingBottom="16dp"/>
+
+        <!-- Status -->
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⏳ Memeriksa status..."
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:padding="12dp"
+            android:gravity="center"
+            android:background="#333333"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Tombol Izin -->
+        <Button
+            android:id="@+id/btnGrant"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="🔓 IZINKAN AKSES NOTIFIKASI"
+            android:backgroundTint="#D84315"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Webhook URL -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="URL Webhook Server" android:textColor="#AAAAAA"
+            android:textSize="12sp" android:layout_marginTop="12dp" android:layout_marginBottom="4dp"/>
+        <EditText
+            android:id="@+id/etUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="https://prosellergamingstore.com/notif_webhook.php"
+            android:hintTextColor="#555555"
+            android:textColor="#FFFFFF"
+            android:background="#1A1A2E"
+            android:padding="12dp"
+            android:inputType="textUri"
+            android:textSize="13sp"
+            android:layout_marginBottom="4dp"/>
+
+        <!-- Secret Key -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Secret Key (opsional, untuk keamanan)" android:textColor="#AAAAAA"
+            android:textSize="12sp" android:layout_marginTop="8dp" android:layout_marginBottom="4dp"/>
+        <EditText
+            android:id="@+id/etSecret"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="rahasia123"
+            android:hintTextColor="#555555"
+            android:textColor="#FFFFFF"
+            android:background="#1A1A2E"
+            android:padding="12dp"
+            android:inputType="textPassword"
+            android:textSize="13sp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Pemisah -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="── Pilih App yang Dipantau ──"
+            android:textColor="#FF8C00" android:textSize="13sp"
+            android:gravity="center" android:layout_marginVertical="8dp"/>
+
+        <!-- E-Wallet -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="💰 E-Wallet" android:textColor="#AAAAAA"
+            android:textSize="11sp" android:layout_marginBottom="4dp"/>
+
+        <Switch android:id="@+id/swGopay" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="GoPay"
+            android:textColor="#FFFFFF" android:textSize="14sp" android:layout_marginBottom="6dp"/>
+        <Switch android:id="@+id/swOvo" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="OVO"
+            android:textColor="#FFFFFF" android:textSize="14sp" android:layout_marginBottom="6dp"/>
+        <Switch android:id="@+id/swDana" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Dana"
+            android:textColor="#FFFFFF" android:textSize="14sp" android:layout_marginBottom="6dp"/>
+        <Switch android:id="@+id/swShopee" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="ShopeePay"
+            android:textColor="#FFFFFF" android:textSize="14sp" android:layout_marginBottom="6dp"/>
+        <Switch android:id="@+id/swLinkaja" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="LinkAja"
+            android:textColor="#FFFFFF" android:textSize="14sp" android:layout_marginBottom="12dp"/>
+
+        <!-- Bank -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="🏦 Bank" android:textColor="#AAAAAA"
+            android:textSize="11sp" android:layout_marginBottom="4dp"/>
+
+        <Switch android:id="@+id/swBca" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="BCA Mobile / myBCA"
+            android:textColor="#FFFFFF" android:textSize="14sp" android:layout_marginBottom="6dp"/>
+        <Switch android:id="@+id/swBri" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="BRImo"
+            android:textColor="#FFFFFF" android:textSize="14sp" android:layout_marginBottom="6dp"/>
+        <Switch android:id="@+id/swMandiri" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Livin by Mandiri"
+            android:textColor="#FFFFFF" android:textSize="14sp" android:layout_marginBottom="6dp"/>
+        <Switch android:id="@+id/swBni" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="BNI Mobile"
+            android:textColor="#FFFFFF" android:textSize="14sp" android:layout_marginBottom="6dp"/>
+        <Switch android:id="@+id/swBsi" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="BSI Mobile"
+            android:textColor="#FFFFFF" android:textSize="14sp" android:layout_marginBottom="12dp"/>
+
+        <!-- Custom App -->
+        <Switch android:id="@+id/swCustom" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="+ Tambah app lain (package name)"
+            android:textColor="#FF8C00" android:textSize="13sp" android:layout_marginBottom="6dp"/>
+        <EditText
+            android:id="@+id/etCustomApps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="com.example.app&#10;com.bank.another"
+            android:hintTextColor="#555555"
+            android:textColor="#FFFFFF"
+            android:background="#1A1A2E"
+            android:padding="10dp"
+            android:inputType="textMultiLine"
+            android:minLines="2"
+            android:textSize="12sp"
+            android:visibility="gone"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Tombol -->
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="💾 SIMPAN &amp; AKTIFKAN"
+            android:backgroundTint="#2E7D32"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="6dp"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="16dp">
+            <Button
+                android:id="@+id/btnTest"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="1"
+                android:text="🧪 Test Kirim"
+                android:backgroundTint="#1565C0"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:layout_marginEnd="6dp"/>
+            <Button
+                android:id="@+id/btnClearLog"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="1"
+                android:text="🗑 Hapus Log"
+                android:backgroundTint="#424242"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <!-- Log -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="📋 Log Notifikasi Tertangkap (terbaru di atas):"
+            android:textColor="#FF8C00" android:textSize="12sp"
+            android:layout_marginBottom="6dp"/>
+
+        <ScrollView
+            android:id="@+id/svLog"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="#0D1117"
+            android:padding="2dp">
+            <TextView
+                android:id="@+id/tvLog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Belum ada notifikasi tertangkap."
+                android:textColor="#00E676"
+                android:textSize="11sp"
+                android:fontFamily="monospace"
+                android:padding="8dp"
+                android:lineSpacingMultiplier="1.4"/>
+        </ScrollView>
+
+        <!-- Footer -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ProSeller Notif v1.0 — by prosellergamingstore.com"
+            android:textColor="#444444"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"/>
+
+    </LinearLayout>
+</ScrollView>
